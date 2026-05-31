@@ -34,6 +34,7 @@ lazygit
 libpulse
 linux
 linux-firmware
+localsend
 nano
 nautilus
 neovim

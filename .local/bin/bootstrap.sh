@@ -38,7 +38,7 @@ exec > >(tee -a "$LOG_FILE") 2>&1
 readonly BOOTSTRAP_VERSION="2.0.0"
 readonly STATE_DIR="$HOME/.local/state/bootstrap"
 readonly DOTFILES_BACKUP="$HOME/.dotfiles-backup"
-readonly DOTFILES_REPO="https://github.com/Lucifer-yup/dotfiles.git"
+readonly DOTFILES_REPO="https://github.com/Lucifer-yup/dotfiles-fresh.git"
 readonly DOTFILES_DIR="$HOME/.dotfiles"
 readonly REPO_PKG_FILE="$HOME/.local/bin/repo-packages.txt"
 readonly AUR_PKG_FILE="$HOME/.local/bin/aur-packages.txt"
@@ -1076,7 +1076,7 @@ dotfiles() { /usr/bin/git --git-dir="$DOTFILES_DIR" --work-tree="$HOME" "$@"; }
 
 if [[ -d "$DOTFILES_DIR" ]]; then
     log_info "Switching dotfiles remote to SSH..."
-    dotfiles remote set-url origin "git@github.com:Lucifer-yup/dotfiles.git"
+    dotfiles remote set-url origin "git@github.com:Lucifer-yup/dotfiles-fresh.git"
     log_ok "Dotfiles remote updated to SSH"
 fi
 

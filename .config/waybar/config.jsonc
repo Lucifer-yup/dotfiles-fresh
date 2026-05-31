@@ -1,0 +1,82 @@
+{   
+    "spacing": 10,
+    "margin-top": 20,
+
+
+
+
+
+
+    "modules-center": [
+        "clock",
+        "hyprland/workspaces",
+        "pulseaudio",
+        "network",
+        "custom/ram"
+    ],
+
+
+
+
+    "clock": {
+        "interval": 60,
+        "format": "{:%I:%M %p}",
+        "tooltip": "false"
+    },
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "active": "",
+            "default": ""
+        },
+        "persistent-workspaces": {
+                "*": 5, // 5 workspaces by default on every monitor
+        }
+    },
+
+    "network": {
+        "interface": "enp1s0",
+        "format": "{ifname}",
+        "format-wifi": "{essid}  {icon}",
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+        "format-ethernet": "Ethernet  ",
+        "format-disconnected": "Ethernet 󰈀", //An empty format will hide the module.
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "Connected",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% ",
+        "format-muted": "Muted  ",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "scroll-step": 5,
+        "on-click": "pavucontrol",
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+
+    "custom/ram": {
+    "exec": "python3 ~/.config/ramwidget/waybar_ram.py",
+    "interval": 3,
+    "format": "  {} ",
+    "tooltip": false
+    }
+}

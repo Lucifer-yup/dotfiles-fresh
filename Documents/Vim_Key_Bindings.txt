@@ -1,0 +1,60 @@
+#Movement
+
+
+
+h:- goes left
+j:- goes down
+k:- goes up
+l:- goes right
+
+
+
+#Modes
+
+
+
+i:- insert before the block cursor
+a:- insert after the block cursor
+
+v:- enter visual mode
+Ctrl + C :- block visual mode (rectangular selection mode)
+
+
+
+#Navigation
+
+
+
+w:- Next word
+b:- Previous word
+e:- end of word
+
+0 (Zero) :- jumps to the start of the line
+$ :- jumps to the end of the line
+^ :- jumps to the first non whitespace character in the current line
+
+gg:- jumps to the first line
+G:- jumps to the last line
+
+Ctrl + d :- Scroll down
+Ctrl + u :- Scroll up 
+
+
+
+#Text Operations
+
+
+
+dd:- delete the current line
+yy:- yoink the current line
+
+d (in visual mode) :- delete selected text
+y (in visual mode) :- yoink selected text
+
+u :- undo
+Ctrl + r :- redo
+
+. :- repeat the last command
+
+ggyG :- yoink the whole content
+ggdG :- delete the whole content

@@ -6,7 +6,7 @@ AUR_FILE="$HOME/.local/bin/aur-packages.txt"
 TMP_REPO="/tmp/repo-packages-new.txt"
 TMP_AUR="/tmp/aur-packages-new.txt"
 
-GIT_DIR="$HOME/.dotfiles/"
+GIT_DIR="$HOME/.dotfiles-fresh/"
 WORK_TREE="$HOME"
 
 # Explicit official repo packages

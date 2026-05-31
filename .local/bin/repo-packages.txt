@@ -4,6 +4,7 @@ awww
 base
 base-devel
 bitwarden
+blueman
 bluetui
 bluez
 bluez-utils

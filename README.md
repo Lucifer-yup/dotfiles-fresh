@@ -13,13 +13,13 @@ The script is fully **idempotent** — run it as many times as needed. It detect
 On a fresh Arch install, run this single command:
 
 ```bash
-curl -sL https://raw.githubusercontent.com/Lucifer-yup/dotfiles/master/.local/bin/bootstrap.sh | bash
+curl -sL https://raw.githubusercontent.com/Lucifer-yup/dotfiles-fresh/master/.local/bin/bootstrap.sh | bash
 ```
 
 Or download and review first (recommended):
 
 ```bash
-curl -sL https://raw.githubusercontent.com/Lucifer-yup/dotfiles/master/.local/bin/bootstrap.sh -o bootstrap.sh
+curl -sL https://raw.githubusercontent.com/Lucifer-yup/dotfiles-fresh/master/.local/bin/bootstrap.sh -o bootstrap.sh
 less bootstrap.sh
 bash bootstrap.sh
 ```

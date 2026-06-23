@@ -1,60 +1,41 @@
-{
-    "layer": "top",
-    "position": "top",
-    "height": 32,
-    "spacing": 5,
-    "margin-top": 10,
+{   
+    "spacing": 10,
+    "margin-top": 20,
 
-    "modules-left": [
-        "custom/launcher",
-        "temperature"
-    ],
+
+
 
     "modules-center": [
-        "clock",
-        "hyprland/workspaces"
-    ],
-
-    "modules-right": [
+	      "clock",
+        "hyprland/workspaces",
         "pulseaudio",
         "network",
-        "custom/ramwidget"
+        "custom/ram"
     ],
 
-    "custom/launcher": {
-        "format": "",
-        "on-click": "~/.config/rofi/launcher.sh"
-    },
 
-    "temperature": {
-        "hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
-        "input-filename": "temp1_input",
-        "critical-threshold": 85,
-        "format": "{icon} {temperatureC}°C",
-        "format-icons": ["", "", "", "", ""]
-    },
+
 
     "clock": {
-        "format": "󰥔 {:%I:%M %p}",
-        "format-alt": "󰥔 {:%H:%M}",
-        "tooltip-format": "{:%d %B %Y}"
+        "interval": 60,
+        "format": "{:%I:%M %p}",
+        "tooltip": "false"
     },
 
     "hyprland/workspaces": {
-      "format": "{icon}",
-      "on-click": "activate",
-      "format-icons": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "urgent": "",
-        "default": ""
-      },
-      "sort-by-number": true,
-      "persistent-workspaces": {
-        "*": 4
-      }
+        "format": "{name}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "active": "",
+            "default": ""
+        },
+        "persistent-workspaces": {
+                "*": 5 // 5 workspaces by default on every monitor
+        }
     },
 
     "network": {
@@ -62,7 +43,7 @@
         "format": "{ifname}",
         "format-wifi": "{essid}  {icon}",
         "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
-        "format-ethernet": "Ethernet ",
+        "format-ethernet": "Ethernet  ",
         "format-disconnected": "Ethernet 󰈀", //An empty format will hide the module.
         "tooltip-format": "{ifname} via {gwaddr} 󰊗",
         "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
@@ -87,16 +68,13 @@
         },
         "scroll-step": 5,
         "on-click": "pavucontrol",
-        "on-click-right": "blueman-manager",
         "ignored-sinks": ["Easy Effects Sink"]
     },
 
-    "custom/ramwidget": {
+    "custom/ram": {
     "exec": "python3 ~/.config/ramwidget/waybar_ram.py",
     "interval": 3,
-    "format": "{} ",
+    "format": "{}   ",
     "tooltip": false
     }
 }
-
-

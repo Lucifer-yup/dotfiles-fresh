@@ -104,7 +104,7 @@ tooltip {
 }
 
 #pulseaudio {
-  min-width: 60px;
+  min-width: 50px;
   color: @yellow;
 }
 
